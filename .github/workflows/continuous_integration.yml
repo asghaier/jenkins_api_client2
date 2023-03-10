@@ -20,8 +20,6 @@ jobs:
 
     runs-on: ${{ matrix.operating-system }}
 
-    env:
-
     steps:
       - name: Checkout Code
         uses: actions/checkout@v3
