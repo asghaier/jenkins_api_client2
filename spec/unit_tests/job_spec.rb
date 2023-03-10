@@ -1,6 +1,7 @@
 require File.expand_path('../spec_helper', __FILE__)
 require 'net/http'
 require File.expand_path('../fake_http_response', __FILE__)
+require 'addressable/uri'
 
 describe JenkinsApi::Client::Job do
   context "With properly initialized Client and all methods defined" do
@@ -94,7 +95,7 @@ describe JenkinsApi::Client::Job do
           params = {
             :name => "test_job_using_params_git",
             :scm_provider => "git",
-            :scm_url => "git://github.com/arangamani/jenkins_api_client/git",
+            :scm_url => "git://github.com/asghaier/jenkins_api_client2/git",
             :scm_branch => "master",
             :scm_credentials_id => 'foobar'
           }
@@ -710,13 +711,13 @@ describe JenkinsApi::Client::Job do
 
       describe "#find_artifact" do
         it "accepts job name and build number and return artifact path" do
-          expected_path = URI.escape("https://example.com/DEFAULT-VIEW/view/VIEW-NAME/job/test_job/2/artifact/somepath/output.json") 
+          expected_path = Addressable::URI.escape("https://example.com/DEFAULT-VIEW/view/VIEW-NAME/job/test_job/2/artifact/somepath/output.json") 
           @client.should_receive(:api_get_request).and_return(@sample_json_build_response)
           expect(@job.find_artifact('test_job', 1)).to eql(expected_path)
         end
 
         it "accepts job name and uses latest build number if build number not provided and return artifact path" do
-          expected_path = URI.escape("https://example.com/DEFAULT-VIEW/view/VIEW-NAME/job/test_job/2/artifact/somepath/output.json") 
+          expected_path = Addressable::URI.escape("https://example.com/DEFAULT-VIEW/view/VIEW-NAME/job/test_job/2/artifact/somepath/output.json") 
           @client.should_receive(:api_get_request).and_return(@sample_json_job_response, @sample_json_build_response)
           expect(@job.find_artifact('test_job')).to eql(expected_path)
         end

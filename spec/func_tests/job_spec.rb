@@ -118,13 +118,13 @@ describe JenkinsApi::Client::Job do
           params = {
             :name => name,
             :scm_provider => "git",
-            :scm_url => "git://github.com./arangamani/jenkins_api_client.git",
+            :scm_url => "git://github.com./asghaier/jenkins_api_client2.git",
             :scm_branch => "master"
           }
           test_and_validate(
             name,
             params,
-            "<url>git://github.com./arangamani/jenkins_api_client.git</url>"
+            "<url>git://github.com./asghaier/jenkins_api_client2.git</url>"
           )
         end
         it "Should create a freestyle job with SVN SCM provider" do

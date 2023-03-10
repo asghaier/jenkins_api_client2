@@ -20,7 +20,7 @@
 # THE SOFTWARE.
 #
 
-require 'jenkins_api_client/urihelper'
+require 'jenkins_api_client2/urihelper'
 
 module JenkinsApi
   class Client
@@ -209,7 +209,7 @@ module JenkinsApi
       #     :keep_dependencies => true,
       #     :concurrent_build => true,
       #     :scm_provider => "git",
-      #     :scm_url => "git://github.com./arangamani/jenkins_api_client.git",
+      #     :scm_url => "git://github.com./asghaier/jenkins_api_client2.git",
       #     :scm_branch => "master",
       #     :shell_command => "bundle install\n rake func_tests"
       #   )
@@ -1687,7 +1687,7 @@ module JenkinsApi
       def find_artifacts(job_name, build_number = nil)
         response_json       = get_build_details(job_name, build_number)
         artifact_path(build_details: response_json).map do |p|
-          URI.escape("#{response_json['url']}artifact/#{p['relativePath']}")
+          path_encode("#{response_json['url']}artifact/#{p['relativePath']}")
         end
       end
 

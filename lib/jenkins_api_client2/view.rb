@@ -20,7 +20,7 @@
 # THE SOFTWARE.
 #
 
-require 'jenkins_api_client/urihelper'
+require 'jenkins_api_client2/urihelper'
 
 module JenkinsApi
   class Client
