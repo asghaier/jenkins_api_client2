@@ -1,15 +1,15 @@
 Jenkins API Client
 ==================
 
-[![Gem Version](http://img.shields.io/gem/v/jenkins_api_client.svg)][gem]
-[![Build Status](http://img.shields.io/travis/arangamani/jenkins_api_client.svg)][travis]
-[![Dependency Status](http://img.shields.io/gemnasium/arangamani/jenkins_api_client.svg)][gemnasium]
-[![Code Climate](http://img.shields.io/codeclimate/github/arangamani/jenkins_api_client.svg)][codeclimate]
+[![Gem Version](http://img.shields.io/gem/v/jenkins_api_client2.svg)][gem]
+[![Build Status](http://img.shields.io/travis/asghaier/jenkins_api_client2.svg)][travis]
+[![Dependency Status](http://img.shields.io/gemnasium/asghaier/jenkins_api_client2.svg)][gemnasium]
+[![Code Climate](http://img.shields.io/codeclimate/github/asghaier/jenkins_api_client2.svg)][codeclimate]
 
-[gem]: https://rubygems.org/gems/jenkins_api_client
-[travis]: http://travis-ci.org/arangamani/jenkins_api_client
-[gemnasium]: https://gemnasium.com/arangamani/jenkins_api_client
-[codeclimate]: https://codeclimate.com/github/arangamani/jenkins_api_client
+[gem]: https://rubygems.org/gems/jenkins_api_client2
+[travis]: http://travis-ci.org/asghaier/jenkins_api_client2
+[gemnasium]: https://gemnasium.com/asghaier/jenkins_api_client2
+[codeclimate]: https://codeclimate.com/github/asghaier/jenkins_api_client2
 
 Copyright &copy; 2012-2017, Kannan Manickam [![endorse](http://api.coderwall.com/arangamani/endorsecount.png)](http://coderwall.com/arangamani)
 
@@ -41,10 +41,10 @@ USAGE:
 
 ### Installation
 
-Install jenkins_api_client by <tt>sudo gem install jenkins_api_client</tt>
+Install jenkins_api_client2 by <tt>sudo gem install jenkins_api_client2</tt>
 Include this gem in your code as a require statement.
 
-    require 'jenkins_api_client'
+    require 'jenkins_api_client2'
 
 ### Using with IRB
 
@@ -126,13 +126,13 @@ Sometimes we want certain jobs to be added as downstream projects and run them
 sequentially. The following example will explain how this could be done.
 
 ```ruby
-require 'jenkins_api_client'
+require 'jenkins_api_client2'
 
 # We want to filter all jobs that start with 'test_job'
 # Just write a regex to match all the jobs that start with 'test_job'
 jobs_to_filter = "^test_job.*"
 
-# Create an instance to jenkins_api_client
+# Create an instance to jenkins_api_client2
 @client = JenkinsApi::Client.new(YAML.load_file(File.expand_path(
   "~/.jenkins_api_client/login.yml", __FILE__)))
 
@@ -275,7 +275,7 @@ backwards compatibility until after an official deprecation period.
 Newer versions of Jenkins (starting with the 1.519 build) make it easier for
 an application to determine the build number for a 'build' request. (previously
 there would be a degree of guesswork involved).  The new version actually
-returns information allowing the jenkins_api_client to check the build queue
+returns information allowing the jenkins_api_client2 to check the build queue
 for the job and see if it has started yet (once it has started, the build-
 number is available.
 
@@ -381,7 +381,7 @@ Before you run the CLI, please make sure the following requirements are
 fulfilled:
 * JRE/JDK 6 (or above) is installed, and 'java' is on the $PATH environment
   variable
-* The ```jenkins_api_client/java_deps/jenkins-cli.jar``` is required as the
+* The ```jenkins_api_client2/java_deps/jenkins-cli.jar``` is required as the
   client to run the CLI. You can retrieve the available commands via accessing
   the URL: ```http://<server>:<port>/cli```
 * (Optional) required if you run the Groovy Script through CLI, make sure
@@ -389,7 +389,7 @@ fulfilled:
 
 ### Using with command line
 Command line interface is supported only from version 0.2.0.
-See help using <tt>jenkinscli help</tt>
+See help using <tt>jenkinscli2 help</tt>
 
 There are three ways for authentication using command line interface
 1. Passing all credentials and server information using command line parameters
@@ -405,7 +405,7 @@ next section for more information about this option.
 ### Logger
 
 As of v0.13.0, support for logger is introduced. Since it would be nice to have
-the activities of the jenkins_api_client in a log file, this feature is
+the activities of the jenkins_api_client2 in a log file, this feature is
 implemented using the Ruby's standard Logger class. For using this feature,
 there are two new input arguments used during the initialization of Client.
 
@@ -455,7 +455,4 @@ FEATURE REQUEST:
 If you use this gem for your project and you think it would be nice to have a
 particular feature that is presently not implemented, I would love to hear that
 and consider working on it. Just open an issue in Github as a feature request.
-
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/arangamani/jenkins_api_client/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 

@@ -1,21 +1,21 @@
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'jenkins_api_client/version'
+require 'jenkins_api_client2/version'
 
 Gem::Specification.new do |s|
-  s.name = "jenkins_api_client"
+  s.name = "jenkins_api_client2"
   s.version = ::JenkinsApi::Client::VERSION
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.require_paths = ["lib"]
-  s.authors = ["Kannan Manickam"]
+  s.authors = ["Ahmed Sghaier"]
   s.description = "\nThis is a simple and easy-to-use Jenkins Api client with features focused on\nautomating Job configuration programaticaly and so forth"
-  s.email = ["arangamani.kannan@gmail.com"]
-  s.executables = ['jenkinscli']
+  s.email = ["ahmed@sghaier.com"]
+  s.executables = ['jenkinscli2']
   s.files         = `git ls-files -z`.split("\x0").select { |f| f.match(%r{lib/|bin/|java_deps/|gemspec}) }
   s.require_paths = ['lib']
-  s.homepage = 'https://github.com/arangamani/jenkins_api_client'
-  s.required_ruby_version = ::Gem::Requirement.new('~> 2.1')
+  s.homepage = 'https://github.com/asghaier/jenkins_api_client2'
+  s.required_ruby_version = ::Gem::Requirement.new('>= 2.0')
   s.rubygems_version = "2.4.5.1"
   s.summary = "Jenkins JSON API Client"
   s.licenses = ["MIT"]

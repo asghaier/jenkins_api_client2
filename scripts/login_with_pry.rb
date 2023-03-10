@@ -4,7 +4,7 @@
 # starts an IRB session so you can interactively play with the API.
 
 $LOAD_PATH.unshift(File.expand_path(File.dirname(__FILE__) + "/../lib"))
-require 'jenkins_api_client'
+require 'jenkins_api_client2'
 require 'yaml'
 require 'pry'
 

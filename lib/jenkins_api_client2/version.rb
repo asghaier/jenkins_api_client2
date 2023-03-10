@@ -1,5 +1,5 @@
 #
-# Copyright (c) 2012 Kannan Manickam <arangamani.kannan@gmail.com>
+# Copyright (c) 2012-2013 Kannan Manickam <arangamani.kannan@gmail.com>
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -20,33 +20,17 @@
 # THE SOFTWARE.
 #
 
-require 'jenkins_api_client/version'
-require 'jenkins_api_client/exceptions'
-require 'jenkins_api_client/client'
-require 'jenkins_api_client/job'
-require 'jenkins_api_client/node'
-require 'jenkins_api_client/system'
-require 'jenkins_api_client/view'
-require 'jenkins_api_client/build_queue'
-require 'jenkins_api_client/plugin_manager'
-require 'jenkins_api_client/user'
-require 'jenkins_api_client/root'
-
-require 'jenkins_api_client/cli/helper'
-require 'jenkins_api_client/cli/base'
-require 'jenkins_api_client/cli/job'
-require 'jenkins_api_client/cli/node'
-require 'jenkins_api_client/cli/system'
-
 module JenkinsApi
   class Client
-    module PluginSettings
-      class InvalidType < Exception; end
-
-      autoload :Base, 'jenkins_api_client/plugin_settings/base'
-      autoload :Hipchat, 'jenkins_api_client/plugin_settings/hipchat'
-      autoload :WorkspaceCleanup, 'jenkins_api_client/plugin_settings/workspace_cleanup'
-      autoload :Collection, 'jenkins_api_client/plugin_settings/collection'
-    end
+    # Major version of the gem
+    MAJOR   = 1
+    # Minor version of the gem
+    MINOR   = 5
+    # Tiny version of the gem used for patches
+    TINY    = 4
+    # Used for pre-releases
+    PRE     = nil
+    # Version String of Jenkins API Client.
+    VERSION = [MAJOR, MINOR, TINY, PRE].compact.join('.')
   end
 end

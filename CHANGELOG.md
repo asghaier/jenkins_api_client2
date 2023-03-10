@@ -4,6 +4,10 @@ CHANGELOG
 upcoming
 --------
 
+v2.0.0   [08-MAR-2023]
+----------------------
+* Forked jenkins_api_client2 from jenkins_api_client
+
 v1.5.3   [29-MAR-2017]
 ----------------------
 * [#230][] Relax on nokogiri version requirement for right this time. Credit [@grosser][]

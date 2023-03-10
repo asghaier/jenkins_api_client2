@@ -1,6 +1,6 @@
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'jenkins_api_client/version'
+require 'jenkins_api_client2/version'
 require 'rake'
 require 'yard'
 require 'bundler/setup'
@@ -25,7 +25,7 @@ RSpec::Core::RakeTask.new(:test) do |spec|
   spec.rspec_opts = ['--color', '--format documentation']
 end
 
-YARD::Config.load_plugin 'thor'
+#YARD::Config.load_plugin 'thor' # TODO: fix error
 YARD::Rake::YardocTask.new do |t|
   t.files = ['lib/**/*.rb', 'lib/**/**/*.rb']
 end
@@ -36,9 +36,9 @@ namespace :doc do
   desc "Generates the class diagram using the yard generated dot file"
   task :generate_class_diagram do
     puts "Generating the dot file..."
-    `yard graph --file jenkins_api_client.dot`
+    `yard graph --file jenkins_api_client2.dot`
     puts "Generating class diagram from the dot file..."
-    `dot jenkins_api_client.dot -Tpng -o jenkins_api_client_class_diagram.png`
+    `dot jenkins_api_client2.dot -Tpng -o jenkins_api_client2_class_diagram.png`
   end
 
   desc "Applies Google Analytics tracking script to all generated html files"
