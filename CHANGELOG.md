@@ -4,7 +4,7 @@ CHANGELOG
 upcoming
 --------
 
-v2.0.0   [08-MAR-2023]
+v1.9.0   [08-MAR-2023]
 ----------------------
 * Forked jenkins_api_client2 from jenkins_api_client
 
