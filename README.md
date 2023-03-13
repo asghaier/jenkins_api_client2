@@ -1,25 +1,15 @@
 Jenkins API Client
 ==================
 
-[![Gem Version](http://img.shields.io/gem/v/jenkins_api_client2.svg)][gem]
-[![Build Status](http://img.shields.io/travis/asghaier/jenkins_api_client2.svg)][travis]
-[![Dependency Status](http://img.shields.io/gemnasium/asghaier/jenkins_api_client2.svg)][gemnasium]
-[![Code Climate](http://img.shields.io/codeclimate/github/asghaier/jenkins_api_client2.svg)][codeclimate]
+[![Gem Version](https://img.shields.io/gem/v/jenkins_api_client2)][gem]
+[![Build Status](https://img.shields.io/github/actions/workflow/status/asghaier/jenkins_api_client2/continuous_integration.yml)][github]
+[![Code Climate](https://img.shields.io/codeclimate/maintainability/asghaier/jenkins_api_client2)][codeclimate]
 
 [gem]: https://rubygems.org/gems/jenkins_api_client2
-[travis]: http://travis-ci.org/asghaier/jenkins_api_client2
-[gemnasium]: https://gemnasium.com/asghaier/jenkins_api_client2
+[github]: https://github.com/asghaier/jenkins_api_client2/actions
 [codeclimate]: https://codeclimate.com/github/asghaier/jenkins_api_client2
 
-Copyright &copy; 2012-2017, Kannan Manickam [![endorse](http://api.coderwall.com/arangamani/endorsecount.png)](http://coderwall.com/arangamani)
-
 Client libraries for communicating with a Jenkins CI server and programatically managing jobs.
-
-IRC Channel: ##jenkins-api-client (on freenode)
-
-Mailing list: jenkins_api_client@googlegroups.com
-
-Google Group: https://groups.google.com/group/jenkins_api_client
 
 OVERVIEW:
 ---------
@@ -30,6 +20,9 @@ JSON API and provides some useful functions for controlling jobs on the Jenkins
 programatically. Even though Jenkins provides an awesome UI for controlling
 jobs, it would be nice and helpful to have a programmable interface so we can
 dynamically and automatically manage jobs and other artifacts.
+
+The project is a continuation of jenkins_api_client by arangamani
+with the aim to provide compatibility fixes for Ruby 3.x and few more improvements.
 
 DETAILS:
 --------
